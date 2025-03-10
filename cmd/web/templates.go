@@ -9,6 +9,10 @@ import (
 	"web.beckerlabs.dev/ui"
 )
 
+type templateData struct {
+	CurrentYear int
+}
+
 // Create a humanDate function which returns a nicely formatted string
 // representation of a time.Time object.
 func humanDate(t time.Time) string {
