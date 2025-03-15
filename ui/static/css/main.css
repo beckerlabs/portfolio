@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Inter", monospace;
 }
 
 html, body {
@@ -23,7 +23,7 @@ header, nav, main, footer {
 
 main {
     margin-top: 54px;
-    margin-bottom: 54px;
+    margin-bottom: 25px;
     min-height: calc(100vh - 345px);
     overflow: auto;
     background-color: #1E201E;
@@ -320,4 +320,18 @@ footer {
 
 footer a {
     color: #697565;
+}
+
+main div {
+    display: flex;
+    text-align: center;
+}
+
+main img {
+    border-radius: 30%;
+}
+
+.about-heading {
+    padding-top: 140px;
+    padding-right: 60%;
 }
