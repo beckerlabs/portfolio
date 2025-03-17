@@ -9,6 +9,7 @@ func routes() http.Handler {
 
 	mux.HandleFunc("GET /{$}", home)
 	mux.HandleFunc("GET /about", about)
+	mux.HandleFunc("GET /posts", posts)
 
 	return mux
 }
