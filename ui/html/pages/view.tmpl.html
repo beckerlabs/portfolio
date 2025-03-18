@@ -1,0 +1,13 @@
+{{define "title"}}Post{{end}}
+
+{{define "main"}}
+    {{with .Post}}
+    <h3>{{.Title}}</h3>
+    <h4>{{humanDate .Created}}</h4>
+    <br>
+    {{range .StructuredContent}}
+    <p>{{.}}</p>
+    <br>
+    {{end}}
+    {{end}}
+{{end}}

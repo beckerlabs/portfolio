@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    line-height: 1.5;
+    line-height: 2;
     background-color: #1E201E;
     color: white;
     overflow-y: scroll;
@@ -336,3 +336,9 @@ main img {
     padding-top: 140px;
     padding-right: 60%;
 }
+
+h2 strong {
+    display: block;
+    font-size: 75%;
+    opacity: 0.75;
+}  

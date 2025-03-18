@@ -5,4 +5,12 @@
     <p>Hey there - my name is Jeremy Becker.  Welcome to my little corner of the internet, where I fiddle with any technology that I find fun and interesting.  That's mostly Golang recently, which drives this website. This place is currently pretty barebones, but I've got some projects planned and may just add them to this website.  Stay tuned!</p>
     <br>
     <p>If you want more information about me, please visit <a href="/about">the about page.</a></p>
+    {{ if .Posts }}
+    <h3>Recent Posts</h3>
+    <ul>
+        {{range .Posts}}
+        <li><a href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a></li>
+        {{end}}
+    </ul>
+    {{end}}
 {{end}}
