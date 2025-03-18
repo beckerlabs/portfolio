@@ -6,11 +6,15 @@ import (
 	"path/filepath"
 	"time"
 
+	"web.beckerlabs.dev/internal/models"
 	"web.beckerlabs.dev/ui"
 )
 
 type templateData struct {
 	CurrentYear int
+	Post        models.Posts
+	Posts       []models.Posts
+	Flash       string
 }
 
 // Create a humanDate function which returns a nicely formatted string
