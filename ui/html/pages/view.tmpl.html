@@ -4,7 +4,8 @@
     {{with .Post}}
     <h3>{{.Title}}</h3>
     <h4>{{humanDate .Created}}</h4>
-    <p class="post-tags">Tags: {{.Tags}}</p>
+    <p>Tags: {{.Tags}}</p>
+    <p>Category: {{.Category}}</p>
     <br>
     {{range .StructuredContent}}
     <p>{{.}}</p>
