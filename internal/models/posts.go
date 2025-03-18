@@ -68,7 +68,7 @@ func (m *PostsModel) Latest() ([]Posts, error) {
 	stmt := `SELECT postId, title, content, category, created, tags
 	FROM posts
 	ORDER BY created DESC
-	LIMIT 3`
+	LIMIT 5`
 
 	rows, err := m.DB.Query(stmt)
 	if err != nil {
