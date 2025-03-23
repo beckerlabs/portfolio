@@ -1,19 +1,25 @@
 {{define "title"}}Home{{end}}
 
 {{define "main"}}
-    <h2 class="text-3xl pl-4">Welcome to BeckerLabs.dev!</h2>
-    <p>Hey there - my name is Jeremy Becker.  Welcome to my little corner of the internet, where I fiddle with any technology that I find fun and interesting.  That's mostly Golang recently, which drives this website. This place is currently pretty barebones, but I've got some projects planned and may just add them to this website.  Stay tuned!</p>
-    <br>
-    <p>If you want more information about me, please visit <a href="/about">the about page.</a></p>
-    <br>
-    <p>Sometimes I also write blog posts or short thoughts.  If you want to read those, see the most recent posts below.</p>
-    <br>
-    {{ if .Posts }}
-    <h3>Recent Posts</h3>
-    <ul>
-        {{range .Posts}}
-        <li><a href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a></li>
-        {{end}}
-    </ul>
-    {{end}}
+    <div class="px-8 flex">
+        <div class="w-1/2">
+            <h2 class="text-4xl pb-8">Welcome to BeckerLabs.dev!</h2>
+            <p>Hey there - my name is Jeremy Becker.  Welcome to my little corner of the internet, where I fiddle with any technology that I find fun and interesting.  That's mostly Golang recently, which drives this website. This place is currently pretty barebones, but I've got some projects planned and may just add them to this website.  Stay tuned!</p>
+            <br>If you want more information about me, please visit the <a class="hover:underline hover:text-blue-600 text-blue-400" href="/about"> about page.</a>
+            <br>Sometimes I also write blog posts or short thoughts.  If you want to read those, see the most recent posts below.</p>
+        </div>
+
+        <div class="w-1/2 text-right">
+            {{ if .Posts }}
+            <h3 class="text-4xl pb-8">Recent Posts</h3>
+            <div class="grid grid-cols-1 gap-4">
+                <ul class="">
+                    {{range .Posts}}
+                    <li><a class="hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a></li>
+                    {{end}}
+                </ul>          
+            </div>
+            {{end}}
+        </div>
+    </div>
 {{end}}

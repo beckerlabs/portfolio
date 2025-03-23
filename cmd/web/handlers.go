@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"html/template"
 	"log"
 	"net/http"
 	"strconv"
@@ -25,27 +24,9 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
 }
 
 func (app *application) about(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Server", "Go")
+	data := app.newTemplateData(r)
 
-	// Include the navigation partial in the template files.
-	files := []string{
-		"./ui/html/base.tmpl.html",
-		"./ui/html/partials/nav.tmpl.html",
-		"./ui/html/pages/about.tmpl.html",
-	}
-
-	ts, err := template.ParseFiles(files...)
-	if err != nil {
-		log.Print(err.Error())
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
-
-	err = ts.ExecuteTemplate(w, "base", nil)
-	if err != nil {
-		log.Print(err.Error())
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-	}
+	app.render(w, r, http.StatusOK, "about.tmpl.html", data)
 }
 
 func (app *application) postView(w http.ResponseWriter, r *http.Request) {
