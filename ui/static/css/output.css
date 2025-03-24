@@ -281,6 +281,9 @@
   .text-slate-500 {
     color: var(--color-slate-500);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .hover\:text-blue-600 {
     &:hover {
       @media (hover: hover) {
