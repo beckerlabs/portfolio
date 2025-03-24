@@ -1,14 +1,24 @@
 {{define "title"}}About{{end}}
 {{define "main"}}
-    <div>
-        <h2 class="about-heading">About Me</h2> 
-        <img src="../../static/img/us.png" alt="Jeremy and his family." width="283" height="378" display="inline">
+    <div class="px-8">
+        <div>
+            <h2 class="text-4xl pb-8">About Me</h2>
+            <article>
+                <img src="../../static/img/us.png" alt="Jeremy and his family." width="283" height="378" class="float-right rounded-2xl">
+                <p class="pl-0.5">Hey there -  I'm Jeremy Becker.  I'm a DevOps engineer who loves to speed up releases while maintaining quality and making developer's lives easier.  I've worked in various roles over my 8 year technology career spanning finance and quick service restaurants.</p>
+                <h3 class="text-slate-500 dark:text-gray-400 text-2xl py-4">Education and Experience</h3>
+                <p>I have a Computer Science Degree from Purdue Fort Wayne with a focus in Software Engineering and I spend a lot of my free time writing code.  Some of my favorite languages are Golang, .NET, Java and Python. My ops background has also blessed me with lots of bash and PowerShell experience. I've used an ever-growing list of tools in my day to day work which includes Kubernetes, Helm, Flux, Splunk, Prometheus, Grafana, Ansible and so much more.</p>
+                <h3 class="text-slate-500 dark:text-gray-400 text-2xl py-4">Hobbies</h3>
+                <p>When I'm not focused on tech you can usually catch me lifting weights, playing video games, reading a good book or spending time with loved ones.  I'm also a life-long sports fan.  I root for the Minnesota Vikings, Minnesota Timberwolves and Purdue Boilermakers.</p>
+                <h3 class="text-slate-500 dark:text-gray-400 text-2xl py-4">Wanna learn more?</h3>
+                <p>If you want to learn more about my career accomplishments, please visit my <a class="hover:underline hover:text-blue-600 text-blue-400" href="https://www.linkedin.com/in/jeremybecker1/">LinkedIn</a> profile.  If you'd like to see some code I've written, check out my <a class="hover:underline hover:text-blue-600 text-blue-400" href="https://www.github.com/jmbecker"/>GitHub</a> profile instead.</p>
+            </article>
+        </div>
+        <div>
+            <h2 class="text-4xl py-8">About This Website</h2>
+            <article>
+                <p>The repository for this website can be found at <a href="https://github.com/jmbecker/beckerlabs" class="hover:underline hover:text-blue-600 text-blue-400">this GitHub link.</a></p>
+            </article>
+        </div>
     </div>
-    <p>Hey there -  I'm Jeremy Becker.  I'm a DevOps engineer who loves to speed up releases while maintaining quality and making developer's lives easier.  I've worked in various roles over my 8 year technology career spanning finance and quick service restaurants.</p>
-    <br>
-    <p>I have a Computer Science Degree from Purdue Fort Wayne with a focus in Software Engineering and I spend a lot of my free time writing code.  Some of my favorite languages are Golang, .NET, Java and Python. My ops background has also blessed me with lots of bash and PowerShell experience. I've used an ever-growing list of tools in my day to day work which includes Kubernetes, Helm, Flux, Splunk, Prometheus, Grafana, Ansible and so much more.</p>
-    <br>
-    <p>When I'm not focused on tech you can usually catch me lifting weights, playing video games, reading a good book or spending time with loved ones.</p>
-    <br>
-    <p>If you want to learn more about my career accomplishments, please visit my <a href="https://www.linkedin.com/in/jeremybecker1/">LinkedIn</a> profile.  If you'd like to see some code I've written, check out my <a href="https://www.github.com/jmbecker"/>GitHub</a> profile instead.</p>
 {{end}}
