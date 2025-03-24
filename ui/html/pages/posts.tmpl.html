@@ -6,7 +6,12 @@
             <article>
                 <ul>
                     {{range .Posts}}
-                    <li><a class="hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a></li>
+                    <li>
+                        <div class="py-4">
+                            - <a class="text-lg hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a>
+                            <p class="px-4 text-md">{{.Category}}</p>
+                        </div>
+                    </li>
                     {{end}}
                 </ul>
             </article>
