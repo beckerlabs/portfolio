@@ -10,6 +10,7 @@ func (app *application) routes() http.Handler {
 	mux.HandleFunc("GET /{$}", app.home)
 	mux.HandleFunc("GET /about", app.about)
 	mux.HandleFunc("GET /posts/{id}", app.postView)
+	mux.HandleFunc("GET /posts", app.getAllPosts)
 
 	return mux
 }
