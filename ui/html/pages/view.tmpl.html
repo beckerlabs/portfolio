@@ -2,16 +2,17 @@
 
 {{define "main"}}
     {{with .Post}}
-    <div class="px-8 flex flex-col">
-        <h3 class="text-3xl lg:text-4xl">{{.Title}}</h3>
-        <h4 class="text-xl lg:text-2xl py-0.5">{{humanDate .Created}}</h4>
-        <p>Tags: {{.Tags}}</p>
-        <p>Category: {{.Category}}</p>
-        <br>
-        {{range .StructuredContent}}
-        <p class="text-xl">{{.}}</p>
-        <br>
-        {{end}}
+    <div class="whitespace-pre-line px-8 flex flex-col">
+        <h3 class="text-2xl pb-4">{{.Title}}</h3>
+        <p class="dark:text-gray-400">{{humanDate .Created}}
+            Category: {{.Category}}
+            Tags: {{.Tags}}
+        </p>
+        <div>
+            {{range .StructuredContent}}
+            <p class="text-lg">{{.}}</p>
+            {{end}}
+        </div>
         {{end}}
     </div>
 {{end}}

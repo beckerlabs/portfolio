@@ -8,8 +8,9 @@
                     {{range .Posts}}
                     <li>
                         <div class="py-4">
-                            - <a class="text-lg hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}} - {{humanDate .Created}}</a>
-                            <p class="px-4 text-md">{{.Category}}</p>
+                            <a class="text-lg hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}}</a>
+                            <p class="px-4 text-md">{{humanDate .Created}}</p> 
+                            <p class="px-4 text-gray-400 text-xs">{{.Category}}</p>
                         </div>
                     </li>
                     {{end}}
