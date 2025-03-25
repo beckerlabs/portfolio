@@ -1,0 +1,21 @@
+{{define "title"}}Posts{{end}}
+{{define "main"}}
+    <div class="px-8">
+        <div>
+            <h2 class="text-4xl pb-8">Posts</h2>
+            <article>
+                <ul>
+                    {{range .Posts}}
+                    <li>
+                        <div class="py-4">
+                            <a class="text-lg hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.ID}}">{{.Title}}</a>
+                            <p class="px-4 text-md">{{humanDate .Created}}</p> 
+                            <p class="px-4 text-gray-400 text-xs">{{.Category}}</p>
+                        </div>
+                    </li>
+                    {{end}}
+                </ul>
+            </article>
+        </div>
+    </div>
+{{end}}

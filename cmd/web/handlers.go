@@ -59,3 +59,16 @@ func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 
 	app.render(w, r, http.StatusOK, "view.tmpl.html", data)
 }
+
+func (app *application) getAllPosts(w http.ResponseWriter, r *http.Request) {
+	posts, err := app.posts.GetAll()
+	if err != nil {
+		app.serverError(w, r, err)
+		return
+	}
+
+	data := app.newTemplateData(r)
+	data.Posts = posts
+
+	app.render(w, r, http.StatusOK, "posts.tmpl.html", data)
+}

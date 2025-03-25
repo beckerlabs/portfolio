@@ -10,6 +10,7 @@ type PostsModelInterface interface {
 	Insert(title, content, category, tags string) (int, error)
 	Get(id int) (Posts, error)
 	Latest() ([]Posts, error)
+	GetAll() ([]Posts, error)
 }
 
 type Posts struct {
@@ -69,6 +70,37 @@ func (m *PostsModel) Latest() ([]Posts, error) {
 	FROM posts
 	ORDER BY created DESC
 	LIMIT 5`
+
+	rows, err := m.DB.Query(stmt)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	posts := []Posts{}
+
+	for rows.Next() {
+		var p Posts
+
+		err := rows.Scan(&p.ID, &p.Title, &p.Content, &p.Category, &p.Created, &p.Tags)
+		if err != nil {
+			return nil, err
+		}
+
+		posts = append(posts, p)
+	}
+
+	if err = rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return posts, nil
+}
+
+func (m *PostsModel) GetAll() ([]Posts, error) {
+	stmt := `SELECT postId, title, content, category, created, tags
+	FROM posts
+	ORDER BY created DESC`
 
 	rows, err := m.DB.Query(stmt)
 	if err != nil {
