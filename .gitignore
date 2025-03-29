@@ -29,3 +29,6 @@ go.work.sum
 
 # Heard mixed results about this, but...
 node_modules/
+
+# Mac...
+**/.DS_Store
