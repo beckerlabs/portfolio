@@ -46,7 +46,7 @@ func main() {
 
 	app := &application{
 		logger:        logger,
-		posts:         &models.PostsModel{DB: db},
+		posts:         &models.PostsModel{},
 		templateCache: templateCache,
 	}
 

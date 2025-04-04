@@ -1,0 +1,21 @@
+{{ define "postsSidebar"}}
+{{ with .PostsSidebar }}
+<aside class="sidebar left-sidebar">
+  <div id="normal-menu">
+      
+    {{ range .Categories }}
+    <h2>{{ .Name }}</h2>
+    <ul>
+      {{ range .Pages }}
+        <li class="">
+          <a href="/posts/{{ .Slug }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+  </div>
+
+</aside>
+{{ end }}
+{{ end }}

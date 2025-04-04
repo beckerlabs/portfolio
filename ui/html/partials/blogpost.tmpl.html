@@ -1,0 +1,11 @@
+{{ define "blogPost" }}
+{{ with .BlogPost}}
+<h1 class="pb-2 text-4xl">{{ .Title }}</h1>
+<p class="pb-3 text-2xl">{{ .Description }}</p>
+<p>{{ .Created }}</p>
+<hr />
+<div class="whitespace-pre-line">
+    {{ .Content }}
+</div>
+{{ end }}
+{{ end }}
