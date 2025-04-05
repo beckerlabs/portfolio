@@ -2,7 +2,7 @@ Title: First post
 Description: A super sweet post about stuff
 Slug: first-post
 Category: Testing
-Order: 1
+Order: 2
 Created: 2024-04-02
 ---
 

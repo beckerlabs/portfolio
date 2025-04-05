@@ -4,9 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"log"
 	"os"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 
 	"github.com/gomarkdown/markdown"
@@ -30,6 +32,7 @@ type BlogPost struct {
 	Created     string
 	Description string
 	Headers     []string
+	Order       int
 }
 
 type PostsSidebarData struct {
@@ -84,7 +87,7 @@ func parseMarkdownFile(content []byte) (BlogPost, error) {
 	metadata = strings.ReplaceAll(metadata, "\r", "")
 	mdContent = strings.ReplaceAll(mdContent, "\r", "")
 
-	title, slug, category, created, description := parseMetadata(metadata)
+	title, slug, category, order, created, description := parseMetadata(metadata)
 
 	htmlContent := mdToHTML([]byte(mdContent))
 	headers := extractHeaders([]byte(mdContent))
@@ -93,6 +96,7 @@ func parseMarkdownFile(content []byte) (BlogPost, error) {
 		Title:       title,
 		Slug:        slug,
 		Category:    category,
+		Order:       order,
 		Created:     created,
 		Description: description,
 		Content:     template.HTML(htmlContent),
@@ -134,6 +138,7 @@ func parseMetadata(metadata string) (
 	title string,
 	slug string,
 	category string,
+	order int,
 	created string,
 	description string,
 ) {
@@ -150,10 +155,17 @@ func parseMetadata(metadata string) (
 	title = metaDataMap["Title"]
 	slug = metaDataMap["Slug"]
 	category = metaDataMap["Category"]
-	created = metaDataMap["Created"]
 	description = metaDataMap["Description"]
+	orderStr := metaDataMap["Order"]
 
-	return title, slug, category, created, description
+	orderStr = strings.TrimSpace(orderStr)
+	order, err := strconv.Atoi(orderStr)
+	if err != nil {
+		log.Printf("Error converting order from string: %v", err)
+		order = 9999
+	}
+
+	return title, slug, category, order, created, description
 }
 
 // Gets all markdown posts and pulls the categories from them to create a SidebarData type.
@@ -172,6 +184,7 @@ func (m *PostsModel) LoadPostsSidebarData(dir string) (PostsSidebarData, error) 
 				categoriesMap[post.Category] = &Category{
 					Name:  post.Category,
 					Pages: []BlogPost{post},
+					Order: post.Order,
 				}
 			} else {
 				categoriesMap[post.Category].Pages = append(categoriesMap[post.Category].Pages, post)

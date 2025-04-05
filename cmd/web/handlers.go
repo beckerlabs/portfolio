@@ -5,12 +5,6 @@ import (
 )
 
 func (app *application) home(w http.ResponseWriter, r *http.Request) {
-	// posts, err := app.posts.Latest()
-	// if err != nil {
-	// 	app.serverError(w, r, err)
-	// 	return
-	// }
-
 	data := app.newTemplateData(r)
 	// data.Posts = posts
 
@@ -25,7 +19,7 @@ func (app *application) about(w http.ResponseWriter, r *http.Request) {
 
 func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
-	// Get the slug from the path and make sure it's not empty.
+
 	slug := r.URL.Path[len("/posts/"):]
 	if slug == "" {
 		http.NotFound(w, r)
@@ -55,10 +49,6 @@ func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 
 	sidebarLinks := app.posts.CreateSidebarLinks(post.Headers)
 	data.SidebarLinks = sidebarLinks
-
-	// Pass through the content
-
-	// data.Post = post
 
 	app.render(w, r, http.StatusOK, "view.tmpl.html", data)
 }
