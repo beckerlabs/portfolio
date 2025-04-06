@@ -12,7 +12,7 @@ func (app *application) routes() http.Handler {
 
 	posts, err := app.posts.LoadMarkdownPosts("./markdown")
 	if err != nil {
-		app.logger.Error("Error loading posts", err)
+		app.logger.Error(err.Error())
 	}
 
 	slugs := app.posts.GetSlugs(posts)
