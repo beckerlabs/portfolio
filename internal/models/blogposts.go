@@ -22,6 +22,7 @@ type PostsModelInterface interface {
 	LoadPostsSidebarData(dir string) (PostsSidebarData, error)
 	GetSlugs(posts []BlogPost) []string
 	GetBlogPostBySlug(slug string, posts []BlogPost) (BlogPost, error)
+	GetLatestPosts(posts []BlogPost) []BlogPost
 }
 
 type BlogPost struct {
@@ -262,4 +263,17 @@ func (m *PostsModel) GetBlogPostBySlug(slug string, posts []BlogPost) (BlogPost,
 		}
 	}
 	return BlogPost{}, fmt.Errorf("post with slug %s not found", slug)
+}
+
+func (m *PostsModel) GetLatestPosts(posts []BlogPost) []BlogPost {
+	sort.Slice(posts, func(i, j int) bool {
+		return posts[i].Created > posts[j].Created
+	})
+
+	// Get the latest 5 posts
+	if len(posts) > 5 {
+		return posts[:5]
+	}
+
+	return posts
 }

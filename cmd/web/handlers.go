@@ -6,7 +6,15 @@ import (
 
 func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
-	// data.Posts = posts
+
+	posts, err := app.posts.LoadMarkdownPosts("./markdown")
+	if err != nil {
+		app.serverError(w, r, err)
+		return
+	}
+
+	latestPosts := app.posts.GetLatestPosts(posts)
+	data.BlogPosts = latestPosts
 
 	app.render(w, r, http.StatusOK, "home.tmpl.html", data)
 }
