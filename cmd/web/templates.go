@@ -11,10 +11,12 @@ import (
 )
 
 type templateData struct {
-	CurrentYear int
-	Post        models.Posts
-	Posts       []models.Posts
-	Flash       string
+	CurrentYear  int
+	BlogPost     models.BlogPost
+	BlogPosts    []models.BlogPost
+	SidebarLinks template.HTML
+	PostsSidebar models.PostsSidebarData
+	Flash        string
 }
 
 // Create a humanDate function which returns a nicely formatted string

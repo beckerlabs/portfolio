@@ -12,13 +12,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
-    <body class="h-screen w-screen flex flex-col px-4 dark:bg-slate-800 dark:text-white font-mono">
+    <body class="h-screen w-screen px-4 dark:bg-slate-800 dark:text-white font-mono">
         <header class="w-full">
             <div>{{template "nav" .}}</div>
             <!-- Add header content here -->
         </header>
         <main class="">
-            <div>{{template "main" .}}</div>
+            {{template "main" .}}
         </main>
         <footer class="text-center sticky top-[100vh] p-10">
             This website is driven by <a class="hover:underline hover:text-blue-600 text-blue-400" href='https://golang.org/'>Go</a> in the year {{.CurrentYear}}.
