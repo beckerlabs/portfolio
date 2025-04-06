@@ -18,7 +18,7 @@
             <div class="grid grid-cols-1 gap-4">
                 <ul class="">
                     {{range .BlogPosts }}
-                    <li><a class="hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.Slug}}">{{.Title}} - {{.Created}}</a></li>
+                    <li><a class="hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.Slug}}">{{.Title}} : {{.Created}}</a></li>
                     {{end}}
                 </ul>          
             </div>

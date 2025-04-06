@@ -1,4 +1,4 @@
-Title: Integrating a Markdown Blog Into An Existing Website
+Title: Integrating a Markdown Blog Into An Existing Golang Website
 Description: Why use MySQL when Markdown do trick?
 Slug: md-blog-issues
 Category: Golang
