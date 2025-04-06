@@ -155,8 +155,9 @@ func parseMetadata(metadata string) (
 	title = metaDataMap["Title"]
 	slug = metaDataMap["Slug"]
 	category = metaDataMap["Category"]
-	description = metaDataMap["Description"]
 	orderStr := metaDataMap["Order"]
+	created = metaDataMap["Created"]
+	description = metaDataMap["Description"]
 
 	orderStr = strings.TrimSpace(orderStr)
 	order, err := strconv.Atoi(orderStr)

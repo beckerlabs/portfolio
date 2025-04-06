@@ -45,7 +45,7 @@ After being mildly frustrated for a minute or two, I remembered that child selec
 The docs spell this out nicely, but I'm essentially selecting children of the div to format and make the website look pretty.  I'm really only interested in things like headings, links and code blocks.  Here's what that looks like in my case.  Warning, you might not like it, but this is what peak Tailwind looks like.
 
 ```html
-<div class="[&_a]:text-blue-400 [&_a]:hover:text-blue-600 [&_a]:underline [&_a]:decoration-1 [&_a]:decoration-blue-400 
+<div class="[&_a]:text-blue-400 [&_a]:hover:text-blue-600
               [&_h2]:text-xl [&_h2]:text-gray-400 
               [&_p]:py-4
               [&_pre]:bg-black [&_pre]:text-green-400">
@@ -53,5 +53,6 @@ The docs spell this out nicely, but I'm essentially selecting children of the di
 </div>
 ```
 
-## Not as bad as I thought
-This actually seems to be the extent of the problems that I had for this task.  I'm still fighting the layout of the blog posts, but that is not necessarily from changing the way things are done.  Just because I'm bad at CSS...
+## That's it?
+
+This is actually the extent of the issues that I had, which was a welcome surprise.  It took me a decent amount of time to integrate everything and then even more time to figure out the styling.  All things considered, actually not that crazy.  If you want to see what it looks like, the repo for this website is available [here](https://github.com/beckerlabs/portfolio).
