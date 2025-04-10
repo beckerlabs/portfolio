@@ -1,13 +1,13 @@
 {{define "title"}}Posts{{end}}
 {{define "main"}}
-    <div class="flex flex-row w-full justify-between">
-        <div class="w-1/3 pt-4 px-8">
+    <div>
+        <div>
             {{ template "postsSidebar" . }}
         </div>
-        <div class="w-3/4">
+        <div>
             {{ template "blogPost" . }}
         </div>
-        <div class="w-1/3 pt-4 px-8">
+        <div>
             {{ template "sidebar-right" .}}
         </div>
     </div>

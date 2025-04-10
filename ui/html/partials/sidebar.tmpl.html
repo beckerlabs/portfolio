@@ -1,13 +1,13 @@
 {{ define "postsSidebar"}}
 {{ with .PostsSidebar }}
-<aside class="sidebar left-sidebar">
+<aside >
   <div id="normal-menu">
       
     {{ range .Categories }}
-    <h2 class="text-blue-400 py-1">{{ .Name }}</h2>
+    <h2 >{{ .Name }}</h2>
     <ul>
       {{ range .Pages }}
-        <li class="hover:text-blue-500 pl-1.5">
+        <li >
           <a href="/posts/{{ .Slug }}">{{ .Title }}</a>
         </li>
       {{ end }}
