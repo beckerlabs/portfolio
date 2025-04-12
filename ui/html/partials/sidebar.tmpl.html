@@ -4,11 +4,11 @@
   <div id="normal-menu">
       
     {{ range .Categories }}
-    <h2 >{{ .Name }}</h2>
+    <h3>{{ .Name }}</h2>
     <ul>
       {{ range .Pages }}
         <li >
-          <a href="/posts/{{ .Slug }}">{{ .Title }}</a>
+          <a class="sidebar-nav" href="/posts/{{ .Slug }}">{{ .Title }}</a>
         </li>
       {{ end }}
     </ul>

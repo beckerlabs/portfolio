@@ -53,6 +53,10 @@ pre {
     padding-left: 10px;
 }
 
+li {
+    line-height: 1.5;
+}
+
 .rounded-image {
     border-radius: 7.5%;
 }
