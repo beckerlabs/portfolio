@@ -1,7 +1,9 @@
 # beckerlabs - My portfolio website
 This repository contains my (pretty barebones) portfolio website.
 I've created a number of these over the years, but this is the
-first one to use Golang as the backend.
+first one to use Golang as the backend.  This webpage includes
+some blog posts, which are written with Markdown and rendered
+into HTML.
 
 ## Technologies Used
 
@@ -13,12 +15,3 @@ sense for me.
 ### [html/template](https://pkg.go.dev/html/template)
 Just the regular old HTML templating package for Go. Nothing
 too fancy here, but this is a simple page so it makes sense to use.
-
-### [TailwindCSS](https://tailwindcss.com/)
-I have a confession... CSS is like black magic to me at times.
-Tailwind makes it easy for me to make the webpage _almost_ have
-a cohesive design.  Plus, I like the concept of only writing HTML.
-
-### [MySQL](https://www.mysql.com/)
-Probably one of the easiest relational databases to set up and use.
-This is really only used to store my blog posts.
