@@ -1,14 +1,14 @@
 {{define "title"}}Posts{{end}}
 {{define "main"}}
-    <div>
-        <div>
+    <div class="content-columns">
+        <div class="posts-sidebar">
             {{ template "postsSidebar" . }}
         </div>
-        <div>
+        <div class="blog-post">
             {{ template "blogPost" . }}
         </div>
-        <div>
-            {{ template "sidebar-right" .}}
+        <div class="sidebar-right">
+            {{ template "sidebar-right" . }}
         </div>
     </div>
 {{end}}

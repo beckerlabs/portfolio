@@ -24,8 +24,8 @@ html, body {
     margin: 0;
     background-color: #314158;
     color: white;
+    font-family: "Ubuntu Mono", monospace;
 }
-
 
 main {
     flex: 1;
@@ -34,6 +34,7 @@ main {
     margin-top: 54px;
     margin-bottom: 54px;
     overflow: auto;
+    font-size: 18px;
 }
 
 footer {
@@ -43,6 +44,13 @@ footer {
     height: 30px; 
     text-align: center;
     width: 100%;
+}
+
+pre {
+    background-color: black;
+    color: lightgreen;
+    font-size: 14px;
+    padding-left: 10px;
 }
 
 .rounded-image {
@@ -66,5 +74,25 @@ footer {
 
 .image-container {
     float: right;
+    margin-left: 20px;
+}
+
+.content-columns {
+    display: flex;
+}
+
+.posts-sidebar {
+    flex: 1;
+    max-width: 20%;
+    margin-right: 20px;
+}
+
+.blog-post {
+    flex: 2;
+}
+
+.sidebar-right {
+    flex: 1;
+    max-width: 20%;
     margin-left: 20px;
 }
