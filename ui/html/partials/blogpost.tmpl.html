@@ -1,8 +1,8 @@
 {{ define "blogPost" }}
 {{ with .BlogPost}}
-<h1 class="pb-2 text-4xl text-blue-400">{{ .Title }}</h1>
-<p class="pb-3 text-2xl text-gray-400">{{ .Description }}</p>
-<p class="pb-5">{{ .Created }}</p>
+<h1>{{ .Title }}</h1>
+<p>{{ .Description }}</p>
+<p>{{ .Created }}</p>
 <hr />
 <div class="[&_a]:text-blue-400 [&_a]:hover:text-blue-600
               [&_h2]:text-xl [&_h2]:text-gray-400 [&_h2]:py-4 

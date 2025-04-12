@@ -1,24 +1,24 @@
 {{define "title"}}Home{{end}}
 
 {{define "main"}}
-    <div class="px-8 flex-col">
+    <div>
         <div>
-            <h2 class="text-2xl lg:text-4xl pb-8">Welcome to BeckerLabs.dev!</h2>
-            <img class="float-right object-scale-down" src="/static/img/hex-code.png" alt="Hexagon with HTML style less than sign, slash, greater than sign." />
+            <h2>Welcome to BeckerLabs.dev!</h2>
+            <img class="image-container" src="/static/img/hex-code.png" alt="Hexagon with HTML style less than sign, slash, greater than sign." />
             <p>Hey there - my name is Jeremy Becker.  Welcome to my little corner of the internet, where I fiddle with any technology that I find fun and interesting.  That's mostly Golang recently, which drives this website.</p>
-            <br>If you want more information about me, please visit the <a class="hover:underline hover:text-blue-600 text-blue-400" href="/about"> about page.</a>
+            <br>If you want more information about me, please visit the <a href="/about"> about page.</a>
             <br>
             <br>
             Sometimes I also write blog posts or short thoughts.  If you want to read disjointed, poorly written thoughts, you can find those below.</p>
         </div>
 
-        <div class="">
+        <div>
             {{ if .BlogPosts }}
-            <h3 class="text-2xl lg:text-4xl py-8">Recent Posts</h3>
-            <div class="grid grid-cols-1 gap-4">
-                <ul class="">
+            <h3>Recent Posts</h3>
+            <div>
+                <ul>
                     {{range .BlogPosts }}
-                    <li><a class="hover:underline hover:text-blue-600 text-blue-400" href="/posts/{{.Slug}}">{{.Title}} : {{.Created}}</a></li>
+                    <li><a href="/posts/{{.Slug}}">{{.Title}} : {{.Created}}</a></li>
                     {{end}}
                 </ul>          
             </div>
