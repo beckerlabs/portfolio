@@ -7,7 +7,7 @@ on:
 env:
   PROJECT_ID: beckerlabs
   REGION: us-central1
-  GAR_LOCATION: us-central1-docker.pkg.dev/beckerlabs/registry
+  GAR_LOCATION: us-central1-docker.pkg.dev/beckerlabs/registry/portfolio:latest
 
 jobs:
   build-push-artifact:
