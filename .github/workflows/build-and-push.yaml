@@ -31,6 +31,7 @@ jobs:
         run: |-
           gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
+      - run: pwd && ls
       - name: Build image
         run: docker build . --file Dockerfile --tag ${{ env.GAR_LOCATION }}
         working-directory: WORKING_DIRECTORY
