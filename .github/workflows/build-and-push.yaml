@@ -36,3 +36,12 @@ jobs:
 
       - name: Push image
         run: docker push ${{ env.GAR_LOCATION }}
+
+      - name: Deploy
+        run: |
+          gcloud run deploy portfolio \
+          --region ${{ env.REGION }} \
+          --image ${{ GAR_LOCATION }} \
+          --platform managed \
+          --allow-unauthenticated \
+          --project ${{ env.PROJECT_ID }}
