@@ -11,5 +11,5 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /usr/bin
 COPY --from=build /go/src/app/web /go/bin/web
 COPY --from=build /go/src/app/markdown /usr/bin/markdown
-EXPOSE 4000
+EXPOSE 8080
 ENTRYPOINT ["/go/bin/web"]
