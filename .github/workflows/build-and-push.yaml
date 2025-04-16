@@ -44,4 +44,5 @@ jobs:
           --image ${{ env.GAR_LOCATION }} \
           --platform managed \
           --allow-unauthenticated \
-          --project ${{ env.PROJECT_ID }}
+          --project ${{ env.PROJECT_ID }} \ 
+          --port 4000
