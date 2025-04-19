@@ -7,7 +7,7 @@ on:
 env:
   PROJECT_ID: beckerlabs
   REGION: us-central1
-  GAR_LOCATION: us-central1-docker.pkg.dev/beckerlabs/registry/portfolio:latest
+  GAR_LOCATION: us-central1-docker.pkg.dev/beckerlabs/registry/portfolio
 
 jobs:
   build-push-artifact:
@@ -41,7 +41,7 @@ jobs:
           gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag ${{ env.GAR_LOCATION }}
+        run: docker build . --file Dockerfile --tag ${{ env.GAR_LOCATION }}:${{ env.VERSION }} --build-arg VERSION=${{ env.VERSION }}
 
       - name: Push image
         run: docker push ${{ env.GAR_LOCATION }}
@@ -50,7 +50,7 @@ jobs:
         run: |
           gcloud run deploy portfolio \
           --region ${{ env.REGION }} \
-          --image ${{ env.GAR_LOCATION }} \
+          --image ${{ env.GAR_LOCATION }}:${{ env.VERSION }} \
           --platform managed \
           --allow-unauthenticated \
           --project ${{ env.PROJECT_ID }} 
