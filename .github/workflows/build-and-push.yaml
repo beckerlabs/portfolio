@@ -44,7 +44,7 @@ jobs:
         run: docker build . --file Dockerfile --tag ${{ env.GAR_LOCATION }}:${{ env.VERSION }} --build-arg VERSION=${{ env.VERSION }}
 
       - name: Push image
-        run: docker push ${{ env.GAR_LOCATION }}
+        run: docker push ${{ env.GAR_LOCATION }}:${{ env.VERSION }}
 
       - name: Deploy
         run: |
