@@ -70,10 +70,16 @@ li {
 .nav-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 1rem;
     padding-top: 20px;
     padding-bottom: 5px;
+}
+
+.nav-container img {
+    width: 10%;
+    height: 10%;
 }
 
 .image-container {
