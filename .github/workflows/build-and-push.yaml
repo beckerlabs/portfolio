@@ -19,8 +19,11 @@ jobs:
       - name: Get Version
         id: get_version
         run: |
-          VERSION=$(head -n 1 CHANGELOG.md | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-          echo "::set-output name=VERSION::$VERSION"
+          echo "VERSION=$(head -n 1 CHANGELOG.md | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+
+      - name: "Output version"
+        run: |
+          echo "{{ env.VERSION}}
 
       - id: "auth"
         uses: "google-github-actions/auth@v1"
