@@ -2,7 +2,7 @@ name: Build and Push to Artifact Registry
 
 on:
   push:
-    branches: ["18-host-this-website-somewhere"]
+    branches: ["main"]
 
 env:
   PROJECT_ID: beckerlabs
