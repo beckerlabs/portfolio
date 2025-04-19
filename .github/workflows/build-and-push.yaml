@@ -23,7 +23,7 @@ jobs:
 
       - name: "Output version"
         run: |
-          echo "{{ env.VERSION}}
+          echo "{{ env.VERSION }}"
 
       - id: "auth"
         uses: "google-github-actions/auth@v1"
