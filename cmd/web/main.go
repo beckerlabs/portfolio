@@ -18,8 +18,10 @@ type application struct {
 	templateCache map[string]*template.Template
 }
 
+var version string
+
 func main() {
-	addr := flag.String("addr", ":4000", "HTTP network address")
+	addr := flag.String("addr", ":8080", "HTTP network address")
 	flag.Parse()
 
 	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
@@ -44,6 +46,7 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 	}
 
+	logger.Info("Application version", "version", version)
 	logger.Info("Starting server", "addr", *addr)
 
 	err = srv.ListenAndServe()
