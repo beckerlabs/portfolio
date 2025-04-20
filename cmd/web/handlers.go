@@ -60,3 +60,16 @@ func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 
 	app.render(w, r, http.StatusOK, "view.tmpl.html", data)
 }
+
+func (app *application) getPosts(w http.ResponseWriter, r *http.Request) {
+	data := app.newTemplateData(r)
+
+	postsSidebarData, err := app.posts.LoadPostsSidebarData("./markdown")
+	if err != nil {
+		app.serverError(w, r, err)
+		return
+	}
+	data.PostsSidebar = postsSidebarData
+
+	app.render(w, r, http.StatusOK, "posts.tmpl.html", data)
+}
