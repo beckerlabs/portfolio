@@ -42,3 +42,24 @@ showOutlineButton.addEventListener('click', function () {
 showPostsButton.addEventListener('click', function () {
     toggleSidebar(showPostsButton, postsSidebar, showOutlineButton, outlineSidebar);
 });
+
+// Event listener for links inside the outlineSidebar
+outlineSidebar.addEventListener('click', function (event) {
+    // Check if the clicked element is a link
+    if (event.target.tagName === 'A') {
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Hide the outline sidebar
+        outlineSidebar.classList.remove('visible');
+        blogPost.classList.remove('hidden');
+        showOutlineButton.textContent = showOutlineButton.dataset.label;
+
+        // Scroll to the referenced header
+        const targetId = event.target.getAttribute('href').substring(1); // Remove the '#' from the href
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});
