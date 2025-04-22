@@ -1,10 +1,10 @@
 var navLinks = document.querySelectorAll("nav a");
 for (var i = 0; i < navLinks.length; i++) {
-	var link = navLinks[i]
-	if (link.getAttribute('href') == window.location.pathname) {
-		link.classList.add("live");
-		break;
-	}
+    var link = navLinks[i];
+    if (link.getAttribute('href') == window.location.pathname) {
+        link.classList.add("live");
+        break;
+    }
 }
 
 const showOutlineButton = document.getElementById('showOutline');
@@ -14,32 +14,31 @@ const outlineSidebar = document.getElementById('outline-sidebar');
 const postsSidebar = document.getElementById('posts-sidebar');
 const blogPost = document.getElementById('blog-post');
 
-showOutlineButton.addEventListener('click', function() {
-	outlineSidebar.classList.toggle('visible');
-	blogPost.classList.toggle('hidden');
-	
-	if (outlineSidebar.classList.contains('visible')) {
-		showOutlineButton.textContent = 'Hide Outline';
-	} else {
-		showOutlineButton.textContent = 'Outline';
-	}
-});
+// Function to toggle visibility of a sidebar
+function toggleSidebar(button, sidebar, otherButton, otherSidebar) {
+    // Toggle the current sidebar
+    const isVisible = sidebar.classList.toggle('visible');
+    blogPost.classList.toggle('hidden', isVisible);
 
-outlineSidebar.addEventListener('click', function(event) {
-    if (event.target !== outlineSidebar) {
-        outlineSidebar.classList.toggle('visible');
-        blogPost.classList.toggle('hidden');
-        showOutlineButton.textContent = outlineSidebar.classList.contains('visible') ? 'Hide Outline' : 'Outline';
+    // Update the button text
+    button.textContent = isVisible ? `Hide ${button.dataset.label}` : button.dataset.label;
+
+    // Hide the other sidebar and reset its button
+    if (isVisible) {
+        otherSidebar.classList.remove('visible');
+        otherButton.textContent = otherButton.dataset.label;
     }
+}
+
+// Add data-label attributes to buttons for dynamic text updates
+showOutlineButton.dataset.label = 'Outline';
+showPostsButton.dataset.label = 'More posts';
+
+// Event listeners for the buttons
+showOutlineButton.addEventListener('click', function () {
+    toggleSidebar(showOutlineButton, outlineSidebar, showPostsButton, postsSidebar);
 });
 
-showPostsButton.addEventListener('click', function() {
-	postsSidebar.classList.toggle('visible');
-	blogPost.classList.toggle('hidden');
-
-	if (postsSidebar.classList.contains('visible')) {
-		showPostsButton.textContent = 'Hide Posts';
-	} else {
-		showPostsButton.textContent = 'More posts';
-	}
+showPostsButton.addEventListener('click', function () {
+    toggleSidebar(showPostsButton, postsSidebar, showOutlineButton, outlineSidebar);
 });
