@@ -1,14 +1,13 @@
 {{ define "blogPost" }}
 {{ with .BlogPost}}
-<h1>{{ .Title }}</h1>
-<p>{{ .Description }}</p>
-<p>{{ .Created }}</p>
-<hr />
-<div class="[&_a]:text-blue-400 [&_a]:hover:text-blue-600
-              [&_h2]:text-xl [&_h2]:text-gray-400 [&_h2]:py-4 
-              [&_p]:py-4
-              [&_pre]:bg-black [&_pre]:text-green-400">
-    {{ .Content }}
+<div id="blog-posts">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+    <p>{{ .Created }}</p>
+    <hr />
+    <div>
+        {{ .Content }}
+    </div>
 </div>
 {{ end }}
 {{ end }}

@@ -23,7 +23,6 @@ func (app *application) routes() http.Handler {
 	for _, slug := range slugs {
 		mux.HandleFunc("GET /posts/"+slug, app.postView)
 	}
-	mux.HandleFunc("GET /posts/{slug}", app.postView)
 
 	return mux
 }
