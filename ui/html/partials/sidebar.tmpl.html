@@ -1,8 +1,7 @@
 {{ define "postsSidebar"}}
 {{ with .PostsSidebar }}
-<aside >
-  <div id="normal-menu">
-      
+<aside>
+  <div>
     {{ range .Categories }}
     <h3>{{ .Name }}</h2>
     <ul>
@@ -13,9 +12,7 @@
       {{ end }}
     </ul>
     {{ end }}
-
   </div>
-
 </aside>
 {{ end }}
 {{ end }}

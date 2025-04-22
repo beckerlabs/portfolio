@@ -1,14 +1,18 @@
 {{define "title"}}Posts{{end}}
 {{define "main"}}
+    <div class="responsiveness">
+        <button id="showOutline">Outline</a>
+        <button id="showPosts">More posts</a>
+    </div>
     <div class="content-columns">
-        <div class="posts-sidebar">
+        <div class="posts-sidebar" id="posts-sidebar">
             {{ template "postsSidebar" . }}
         </div>
-        <div class="blog-post">
+        <div class="blog-post" id="blog-post">
             {{ template "blogPost" . }}
         </div>
-        <div class="sidebar-right">
-            {{ template "sidebar-right" . }}
+        <div class="outline-sidebar" id="outline-sidebar">
+            {{ template "outline-sidebar" . }}
         </div>
     </div>
 {{end}}

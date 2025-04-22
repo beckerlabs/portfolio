@@ -13,7 +13,6 @@ func (app *application) routes() http.Handler {
 
 	mux.HandleFunc("GET /{$}", app.home)
 	mux.HandleFunc("GET /about", app.about)
-	mux.HandleFunc("GET /posts", app.getPosts)
 
 	posts, err := app.posts.LoadMarkdownPosts("./markdown")
 	if err != nil {
@@ -24,7 +23,6 @@ func (app *application) routes() http.Handler {
 	for _, slug := range slugs {
 		mux.HandleFunc("GET /posts/"+slug, app.postView)
 	}
-	mux.HandleFunc("GET /posts/{slug}", app.postView)
 
 	return mux
 }
