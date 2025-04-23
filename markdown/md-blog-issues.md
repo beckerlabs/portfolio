@@ -3,7 +3,7 @@ Description: Why use MySQL when Markdown do trick?
 Slug: md-blog-issues
 Category: Golang
 Order: 1
-Created: 2024-04-03
+Created: 2025-04-22
 ---
 
 I just rewrote the blogging functionality of this website.  As all great programmers do, I stole the code from the internet.  I tried to integrate that work into this existing website, and as you'd expect, ran into some issues.  This blog post covers a few of the things I ran into, how I fixed them, and why I did this in the first place.
@@ -18,7 +18,9 @@ I went searching for an implementation of this online and quickly found [this bl
 
 ## CSS and design is hard
 
-I've been using this website as a way to teach myself [TailwindCSS](https://tailwindcss.com/).  My eye for visual design kind of ended in 8th grade when I stopped making signatures for forums, but I've enjoyed using Tailwind to style this page.  I like just having to change the look of things inside of the HTML.
+I have a confession to make - my eye for visual design kind of ended in 8th grade when I stopped making signatures for forums. I originally tried to use TailwindCSS on this webpage, but decided to go back to vanilla CSS.  My CSS is already pretty bad and using TailwindCSS just made things harder.  It was an unnecessary layer of abstraction over something I'm not well versed in.  With that being said, I'm still chronicling my issues below in case it helps other people.
+
+## TailwindCSS and templating
 
 With the change in how blog posts are written, the HTML templating also changed.  I'm now passing through the content as a `template.HTML` type and just bringing that whole template into my blogpost view, like so:
 
@@ -55,4 +57,6 @@ The docs spell this out nicely, but I'm essentially selecting children of the di
 
 ## That's it?
 
-This is actually the extent of the issues that I had, which was a welcome surprise.  It took me a decent amount of time to integrate everything and then even more time to figure out the styling.  All things considered, actually not that crazy.  If you want to see what it looks like, the repo for this website is available [here](https://github.com/beckerlabs/portfolio).
+This is actually the extent of the issues that I had, which was a welcome surprise.  It took me a decent amount of time to integrate everything and then even more time to figure out the styling.  Then I removed that extra layer of abstraction and had to rewrite this blog post.  Awesome.
+
+All things considered, actually not that crazy.  If you want to see the structure sans TailwindCSS, see the repository [here](https://github.com/beckerlabs/portfolio).
