@@ -1,3 +1,6 @@
+## 1.0.2
+- Rewrite the markdown blog issue post to point out I ripped out TailwindCSS.
+
 ## 1.0.1
 - Add branding to shortcut icon.
 - Add logo to navbar.
