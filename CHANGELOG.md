@@ -1,3 +1,6 @@
+## 1.0.3
+- Change us picture to just me.
+
 ## 1.0.2
 - Rewrite the markdown blog issue post to point out I ripped out TailwindCSS.
 
