@@ -1,3 +1,8 @@
+## 1.1.0
+- Add the Air blog post.
+- CSS updates to show images more efficiently on small viewports.
+- Small gitignore change.
+
 ## 1.0.3
 - Change us picture to just me.
 - Update nav bar to use the logo with text.
