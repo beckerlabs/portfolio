@@ -33,6 +33,12 @@ pre {
     padding-left: 10px;
 }
 
+code {
+    background-color: black;
+    color: lightgreen;
+    font-size: 14px;
+}
+
 h2 {
     color: #6a7282
 }
@@ -102,6 +108,13 @@ a.nav-text {
     margin-left: 20px;
 }
 
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
 .content-columns {
     display: flex;
 }
@@ -158,4 +171,7 @@ a.nav-text {
         padding-left: 0.5rem;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
+    .blog-post-content img {
+        max-width: 75%;
+    } 
 }
