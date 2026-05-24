@@ -1,3 +1,6 @@
+## 1.1.1
+- Update about section with new job info.
+
 ## 1.1.0
 - Add the Air blog post.
 - CSS updates to show images more efficiently on small viewports.
