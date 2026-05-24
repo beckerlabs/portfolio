@@ -1,5 +1,6 @@
 ## 1.1.1
 - Update about section with new job info.
+- Add LinkedIn link.
 
 ## 1.1.0
 - Add the Air blog post.
