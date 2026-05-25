@@ -1,3 +1,6 @@
+## 1.1.2
+- Change colors for blog headings and links to match colors on logo image.
+
 ## 1.1.1
 - Update about section with new job info.
 - Add LinkedIn link.
