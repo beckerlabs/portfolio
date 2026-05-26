@@ -1,3 +1,6 @@
+## 1.1.3
+- Testing push.
+
 ## 1.1.2
 - Change colors for blog headings and links to match colors on logo image.
 
