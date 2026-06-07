@@ -1,3 +1,6 @@
+## 1.1.3
+- Update GitHub Actions to be node24 compliant.
+
 ## 1.1.2
 - Change colors for blog headings and links to match colors on logo image.
 
