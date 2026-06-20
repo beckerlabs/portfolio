@@ -23,6 +23,7 @@ type PostsModelInterface interface {
 	GetSlugs(posts []BlogPost) []string
 	GetBlogPostBySlug(slug string, posts []BlogPost) (BlogPost, error)
 	GetLatestPosts(posts []BlogPost) []BlogPost
+	GetAllPosts(posts []BlogPost) []BlogPost
 }
 
 type BlogPost struct {
@@ -275,5 +276,12 @@ func (m *PostsModel) GetLatestPosts(posts []BlogPost) []BlogPost {
 		return posts[:5]
 	}
 
+	return posts
+}
+
+func (m *PostsModel) GetAllPosts(posts []BlogPost) []BlogPost {
+	sort.Slice(posts, func(i, j int) bool {
+		return posts[i].Created > posts[j].Created
+	})
 	return posts
 }

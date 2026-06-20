@@ -25,6 +25,20 @@ func (app *application) about(w http.ResponseWriter, r *http.Request) {
 	app.render(w, r, http.StatusOK, "about.tmpl.html", data)
 }
 
+func (app *application) postsList(w http.ResponseWriter, r *http.Request) {
+	data := app.newTemplateData(r)
+
+	posts, err := app.posts.LoadMarkdownPosts("./markdown")
+	if err != nil {
+		app.serverError(w, r, err)
+		return
+	}
+
+	data.BlogPosts = app.posts.GetAllPosts(posts)
+
+	app.render(w, r, http.StatusOK, "posts.tmpl.html", data)
+}
+
 func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 
