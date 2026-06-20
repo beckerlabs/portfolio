@@ -1,0 +1,16 @@
+{{define "title"}}Blog Posts{{end}}
+
+{{define "main"}}
+    <div>
+        <h2>Blog Posts</h2>
+        {{ if .BlogPosts }}
+        <ul>
+            {{range .BlogPosts}}
+            <li><a href="/posts/{{.Slug}}">{{.Title}}</a> &mdash; {{.Created}}</li>
+            {{end}}
+        </ul>
+        {{ else }}
+        <p>No posts yet.</p>
+        {{ end }}
+    </div>
+{{end}}
