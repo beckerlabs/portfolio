@@ -1,3 +1,7 @@
+## 1.2.0
+- Add a blogs page.
+- Add a small iPhone Mirroring post.
+
 ## 1.1.3
 - Update GitHub Actions to be node24 compliant.
 
