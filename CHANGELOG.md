@@ -1,3 +1,6 @@
+## 1.3.0
+- Add a wishlist page with sections for Jeremy, Tyson and Alyssa, driven by wishlists/wishlists.yaml.
+
 ## 1.2.0
 - Add a blogs page.
 - Add a small iPhone Mirroring post.

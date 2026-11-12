@@ -15,3 +15,10 @@ sense for me.
 ### [html/template](https://pkg.go.dev/html/template)
 Just the regular old HTML templating package for Go. Nothing
 too fancy here, but this is a simple page so it makes sense to use.
+
+## Wishlists
+The `/wishlist` page shows a section for each person listed in
+`wishlists/wishlists.yaml`. To add an item, add an entry with a
+`name` and `url` (plus optional `price` and `notes`) under that
+person's `items`, then push to `main`. `go test ./...` checks
+that the file is valid.
