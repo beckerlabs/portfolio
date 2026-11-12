@@ -17,10 +17,30 @@
 
 people:
   - name: Jeremy
-    items: []
-
+    items: 
+      - name: Rogue 3 Bar Gun Rack
+        url: https://www.roguefitness.com/rogue-3-bar-gun-rack?a_aid=5a0f18f2dba09&a_cid=81311592
+        price: ~$60
+      - name: Rogue Rotating V-Grip Cable Attachment
+        url: https://www.roguefitness.com/rogue-rotating-v-grip-cable-attachment?a_aid=5a0f18f2dba09&a_cid=81311592
+        price: ~$95
+        notes: Prefer the Raw Aluminum or Gun Metal finishes.
+      - name: Bench Blokz - Large
+        url: https://www.roguefitness.com/bench-blokz
+        price: $64.95
+        notes: The large size.
+      - name: EliteFTS Pro Short Mini Band
+        url: https://elitefts.com/collections/bands/products/eliteftstm-pro-short-mini-resistance-band
+        price: $5.40
+      - name: EliteFTS Pro Average Band
+        url: https://elitefts.com/collections/bands/products/elitefts%E2%84%A2-pro-average-resistance-band
+        price: $28.26
+      - name: EliteFTS Pro Strong Band
+        url: https://elitefts.com/collections/bands/products/elitefts-pro-strong-resistance-band
+        price: $34.80
+        
   - name: Tyson
-    items: []
+    items:
 
   - name: Alyssa
     items: []
