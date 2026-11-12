@@ -14,6 +14,7 @@ func (app *application) routes() http.Handler {
 	mux.HandleFunc("GET /{$}", app.home)
 	mux.HandleFunc("GET /about", app.about)
 	mux.HandleFunc("GET /posts", app.postsList)
+	mux.HandleFunc("GET /wishlist", app.wishlist)
 
 	posts, err := app.posts.LoadMarkdownPosts("./markdown")
 	if err != nil {

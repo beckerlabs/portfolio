@@ -39,6 +39,19 @@ func (app *application) postsList(w http.ResponseWriter, r *http.Request) {
 	app.render(w, r, http.StatusOK, "posts.tmpl.html", data)
 }
 
+func (app *application) wishlist(w http.ResponseWriter, r *http.Request) {
+	data := app.newTemplateData(r)
+
+	wishlists, err := app.wishlists.LoadWishlists("./wishlists/wishlists.yaml")
+	if err != nil {
+		app.serverError(w, r, err)
+		return
+	}
+	data.Wishlists = wishlists
+
+	app.render(w, r, http.StatusOK, "wishlist.tmpl.html", data)
+}
+
 func (app *application) postView(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 

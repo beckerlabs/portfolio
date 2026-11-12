@@ -15,6 +15,7 @@ import (
 type application struct {
 	logger        *slog.Logger
 	posts         models.PostsModelInterface
+	wishlists     models.WishlistsModelInterface
 	templateCache map[string]*template.Template
 }
 
@@ -35,6 +36,7 @@ func main() {
 	app := &application{
 		logger:        logger,
 		posts:         &models.PostsModel{},
+		wishlists:     &models.WishlistsModel{},
 		templateCache: templateCache,
 	}
 

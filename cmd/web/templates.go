@@ -16,6 +16,7 @@ type templateData struct {
 	BlogPosts    []models.BlogPost
 	SidebarLinks template.HTML
 	PostsSidebar models.PostsSidebarData
+	Wishlists    []models.Wishlist
 	Flash        string
 }
 

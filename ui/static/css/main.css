@@ -135,6 +135,46 @@ a.nav-text {
     display: none;
 }
 
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.wishlist-card {
+    border: 1px solid #E4E5E7;
+    border-radius: 8px;
+    padding: 0 1rem 1rem;
+}
+
+.wishlist-card h3 {
+    border-bottom: 1px solid #E4E5E7;
+    padding-bottom: 0.5rem;
+}
+
+.wishlist-items {
+    padding-left: 1.2rem;
+}
+
+.wishlist-items li {
+    margin-bottom: 0.75rem;
+}
+
+.wishlist-price {
+    margin-left: 0.5rem;
+    color: #D7ADFF;
+}
+
+.wishlist-notes {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.wishlist-empty {
+    font-style: italic;
+    opacity: 0.7;
+}
+
 /* Responsive Design */
 @media only screen and (max-width: 1026px) {
     .posts-sidebar {

@@ -1,0 +1,26 @@
+# Wishlists shown on the /wishlist page.
+#
+# Each person gets their own section, shown in the order listed here.
+# To add an item, add an entry under that person's `items` and push to main.
+#
+# Item fields:
+#   name     (required) What the item is.
+#   url      (required) Link to where it can be bought. Must start with http:// or https://.
+#   price    (optional) Free text, e.g. "$49.99" or "~$20".
+#   notes    (optional) Size, color, model number, etc.
+#
+# Example:
+#   - name: Adjustable Dumbbells
+#     url: https://www.example.com/dumbbells
+#     price: "$299.99"
+#     notes: The 5-52.5 lb set
+
+people:
+  - name: Jeremy
+    items: []
+
+  - name: Tyson
+    items: []
+
+  - name: Alyssa
+    items: []

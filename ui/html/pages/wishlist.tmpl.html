@@ -1,0 +1,27 @@
+{{define "title"}}Wishlists{{end}}
+
+{{define "main"}}
+    <div>
+        <h2>Wishlists</h2>
+        <div class="wishlist-grid">
+            {{range .Wishlists}}
+            <section class="wishlist-card">
+                <h3>{{.Name}}</h3>
+                {{if .Items}}
+                <ul class="wishlist-items">
+                    {{range .Items}}
+                    <li>
+                        <a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Name}}</a>
+                        {{with .Price}}<span class="wishlist-price">{{.}}</span>{{end}}
+                        {{with .Notes}}<div class="wishlist-notes">{{.}}</div>{{end}}
+                    </li>
+                    {{end}}
+                </ul>
+                {{else}}
+                <p class="wishlist-empty">Nothing on the list yet.</p>
+                {{end}}
+            </section>
+            {{end}}
+        </div>
+    </div>
+{{end}}
