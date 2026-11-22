@@ -1,3 +1,6 @@
+## 1.3.1
+- Finish wishlist with 2026 entries.
+
 ## 1.3.0
 - Add a wishlist page with sections for Jeremy, Tyson and Alyssa, driven by wishlists/wishlists.yaml.
 
