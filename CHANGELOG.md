@@ -1,3 +1,7 @@
+## 1.3.2
+- Fix some links.
+- Add color descriptions for Alyssa's clothes.
+
 ## 1.3.1
 - Finish wishlist with 2026 entries.
 

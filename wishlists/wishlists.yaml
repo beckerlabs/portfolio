@@ -38,7 +38,7 @@ people:
         url: https://elitefts.com/collections/bands/products/eliteftstm-pro-short-mini-resistance-band
         price: $5.40
       - name: EliteFTS Pro Average Band
-        url: https://elitefts.com/collections/bands/products/elitefts%E2%84%A2-pro-average-resistance-band
+        url: https://elitefts.com/collections/bands/products/elitefts-pro-average-resistance-band
         price: $28.26
       - name: EliteFTS Pro Strong Band
         url: https://elitefts.com/collections/bands/products/elitefts-pro-strong-resistance-band
@@ -77,11 +77,11 @@ people:
       - name: Halara Knit Pockets Casual Overall
         url: https://www.halara.com/products/Ribbed-Knit-Adjustable-Strap-Button-Multiple-Pockets-Casual-Overalls-10-541?currentSkc=2040771
         price: $34.95
-        notes: Petite Inseam, Small size
+        notes: Moss Green Floral Velvet, Petite Inseam, Small size
       - name: Duluth Trading Waffle Stitch Cardigan'
         url: https://www.duluthtrading.com/womens-duluth-heritage-waffle-stitch-cardigan-30833.html
         price: $55.97
-        notes: Size small
+        notes: Sea Salt & Tan Stripe color, Size small
       - name: Victoria's Secret So Soft Long Pajama Set
         url: https://www.victoriassecret.com/us/vs/sleepwear-and-lingerie-catalog/5000007337/-/a/generic-11250720-choice-98S4/sosoft-modal-long-pajama-set-pink?choice=7OPE&genericId=11250720
         price: $55.96
