@@ -21,14 +21,19 @@ people:
       - name: Rogue 3 Bar Gun Rack
         url: https://www.roguefitness.com/rogue-3-bar-gun-rack?a_aid=5a0f18f2dba09&a_cid=81311592
         price: ~$60
-      - name: Rogue Rotating V-Grip Cable Attachment
-        url: https://www.roguefitness.com/rogue-rotating-v-grip-cable-attachment?a_aid=5a0f18f2dba09&a_cid=81311592
-        price: ~$95
-        notes: Prefer the Raw Aluminum or Gun Metal finishes.
+      - name: Barbell Rescue Brush
+        url: https://barbellrescue.com/products/barbell-rescue-brush?variant=41664209780780
+        price: $49.99
+      - name: Husker Power Lock
+        url: https://huskerpowerlock.com/products/pair-of-barbell-collars?_su_rec=i3OykDz3UvnX4t4MCYmU-zEDL1kp9odECjzWvshamRXCxRnovSxV3D3mpCoz9CXahy6JA7ud7990x-tldTy8AZ5F2W2lzGbuaq2iYOUBMF7MA0xmg0elBek23RWuDKub8T31iopkeM8tswNyB26ILuJ_Csjs6ydnDdfiBRQ6LTwGQLucST6II9LYgaa0xIPLhwppfWLj6twhRFwAgBUT30PW0cMJYYcTdjQldNOnMp912_c9sic2Um8wW_dAGIeMhTBkmyL480hU1_D18QEJiot2R-63zoGbYoHqEFZT-jhNdKmpdi4ecE0fdIjEpxOdKJ5QqO6LYhp6WF1TnxrYcH7UstF07FiqWFjQBtN5&_su_rec_id=c41ba02f-b212-4af2-a3d8-6dedaaf4641a-1794712994
+        price: $55.00
       - name: Bench Blokz - Large
         url: https://www.roguefitness.com/bench-blokz
         price: $64.95
         notes: The large size.
+      - name: Rep X Kleva Built Genesis Jack
+        url: https://repfitness.com/products/rep-x-kleva-built-genesis-jack-2-0?variant=51690261086a74
+        price: $79.99
       - name: EliteFTS Pro Short Mini Band
         url: https://elitefts.com/collections/bands/products/eliteftstm-pro-short-mini-resistance-band
         price: $5.40
@@ -38,9 +43,48 @@ people:
       - name: EliteFTS Pro Strong Band
         url: https://elitefts.com/collections/bands/products/elitefts-pro-strong-resistance-band
         price: $34.80
-        
+      - name: Amazon Wishlist
+        url: https://www.amazon.com/hz/wishlist/ls/I2ER3QBI6ZHT?ref_=wl_share
+
   - name: Tyson
     items:
+      - name: Famous Footwear TMNT Light Up Shoes
+        url: https://www.famousfootwear.com/product/teenage-mutant-ninja-turtles-kids-tmnt-light-up-hi-top-sneaker-toddler-little-kid-1056329
+        price: $29.99
+        notes: Toddler size 9
+      - name: Famous Footwear TMNT Light Up Boots
+        url: https://www.famousfootwear.com/product/teenage-mutant-ninja-turtles-kids-tmnt-light-up-winter-boot-toddler-little-kid-1056685
+        price: $35.98
+        notes: Toddler size 9
+      - name: Whatever toddler clothes you like :)
+        notes: Size 4T clothes.  Size 9 shoes.
+        url: https://www.google.com/search?q=toddler+clothes&sca_esv=f8fac407ab559594&sxsrf=AKL5yDjZ9JXxwLr3nX5NgcAKp1LglpjsNw%3A1795315734762&source=hp&ei=FlgCa6DbLM7tmLQP9venkQY&iflsig=AHSINFcAAAAAawJmJqfspdadnsTa10XyrMb9IpCpXKt6&uact=5&oq=toddler+clothes&gs_lp=Egdnd3Mtd2l6Ig90b2RkbGVyIGNsb3RoZXMyCBAAGIAEGLEDMhEQABiABBixAxiQBxj7BhjyBjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESL8dUABY7RtwA3gAkAEAmAGIAaABtgqqAQQxNi4ysAEAuAEDyAEA-AEBmAIVoAKNC8ICFhAuGIAEGIoFGEMYsQMYgwEYxwEY0QPCAhAQLhiABBiKBRhDGMcBGNEDwgIXEC4YgAQYigUYjQYYsQMYgwEYxwEY0QPCAg4QABiABBiKBRiNBhixA8ICCxAAGIAEGLEDGIMBwgIOEC4YgAQYsQMYxwEY0QPCAhMQABiABBiKBRhDGJAHGPsGGPIGwgIKEAAYgAQYigUYQ8ICDRAAGIAEGIoFGEMYsQPCAhQQLhiABBiKBRixAxiDARjHARjRA8ICEBAAGIAEGIoFGEMYsQMYgwHCAg0QLhiABBiKBRhDGLEDwgIIEC4YgAQYsQPCAg4QABiABBiQBxj7BhjyBsICDhAAGIAEGIoFGLEDGIMBwgIIEAAYgAQYtAfCAgYQABgWGB6YAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKSBwQxOS4yoAeUhwGyBwQxNi4yuAeAC8IHBjAuOC4xM8gHOoAIAQ&sclient=gws-wiz
+      - name: Amazon Wishlist
+        url: https://www.amazon.com/hz/wishlist/ls/2RYNXMQZLOQXE?ref_=wl_share
 
   - name: Alyssa
-    items: []
+    items:
+      - name: Ulta 3 Piece Black Honey Lip & Cheek Makeup Gift Set
+        url: https://www.ulta.com/p/3-piece-black-honey-lip-cheek-makeup-gift-set-pimprod2060676?sku=2657078
+        price: $30
+      - name: Target Braun MultiQuick Immersion Handblender
+        url: https://www.target.com/p/braun-multiquick-immersion-hand-blender/-/A-94941462
+        price: $79.99
+      - name: Halara Flex High Waisted Work Pants
+        url: https://www.halara.com/products/high-waisted-plicated-side-pocket-wide-leg-solid-palazzo-waffle-casual-pants?groupName=Petite&currentSkc=1810736&variant=44463545778342&sizeName=XS
+        price: $39.95
+        notes: Petite length, High-Waisted, XS size
+      - name: Halara Knit Pockets Casual Overall
+        url: https://www.halara.com/products/Ribbed-Knit-Adjustable-Strap-Button-Multiple-Pockets-Casual-Overalls-10-541?currentSkc=2040771
+        price: $34.95
+        notes: Petite Inseam, Small size
+      - name: Duluth Trading Waffle Stitch Cardigan'
+        url: https://www.duluthtrading.com/womens-duluth-heritage-waffle-stitch-cardigan-30833.html
+        price: $55.97
+        notes: Size small
+      - name: Victoria's Secret So Soft Long Pajama Set
+        url: https://www.victoriassecret.com/us/vs/sleepwear-and-lingerie-catalog/5000007337/-/a/generic-11250720-choice-98S4/sosoft-modal-long-pajama-set-pink?choice=7OPE&genericId=11250720
+        price: $55.96
+        notes: Angel Pink Logo Script, Size small, Short length
+      - name: Amazon Wishlist
+        url: https://www.amazon.com/hz/wishlist/dl/invite/AQICAHild4Vpadjqcz7bdgUf6Qu6-OaRt7P_FJRNNbyMlg-OQwGSNq6pE0Bh-yJrfF11W4P1AAAAkTCBjgYJKoZIhvcNAQcGoIGAMH4CAQAweQYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxpUX2gUgYFyZ2JGhsCARCATPfYjwoLqFJ8mlKzlGqyaydqVWGv1i9PjYdkCFNwGvXqRI-haNIUcVV2GJ_oIadHOpKabj7tw1KeOUbzA03ojirufa6y1rubhrF5jrw?ref_=wl_share
