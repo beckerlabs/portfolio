@@ -1,3 +1,6 @@
+## 1.3.3
+- Security fixes.
+
 ## 1.3.2
 - Fix some links.
 - Add color descriptions for Alyssa's clothes.
