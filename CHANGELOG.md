@@ -1,3 +1,6 @@
+## 1.3.4
+- Fix typo in wishlists.
+
 ## 1.3.3
 - Security fixes.
 
